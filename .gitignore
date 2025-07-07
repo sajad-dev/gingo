@@ -1,0 +1,4 @@
+storage/log/*
+/storage/files/*
+.env
+go.sum
