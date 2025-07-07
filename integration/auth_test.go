@@ -5,9 +5,8 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/sajad-dev/gingo/internal/app/helpers"
+	"github.com/sajad-dev/gingo-helpers/utils"
 	"github.com/sajad-dev/gingo/internal/app/validation"
-	"github.com/sajad-dev/gingo/utils"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -57,7 +56,7 @@ func TestAuth_Register(t *testing.T) {
 	err = json.Unmarshal(res.Body.Bytes(), &body)
 	assert.NoError(t, err)
 
-	c, ok, err := helpers.ValidJWT(body["token"])
+	c, ok, err := utils.ValidJWT(body["token"])
 	assert.NoError(t, err)
 	assert.True(t, ok)
 	assert.Equal(t, "prj.sajad85@gmail.com", (*c).Parameters["email"])
@@ -112,7 +111,7 @@ func TestAuth_Login(t *testing.T) {
 	err = json.Unmarshal(res.Body.Bytes(), &body)
 	assert.NoError(t, err)
 
-	c, ok, err := helpers.ValidJWT(body["token"].(string))
+	c, ok, err := utils.ValidJWT(body["token"].(string))
 	assert.NoError(t, err)
 	assert.True(t, ok)
 	assert.Equal(t, "prj.sajad85@gmail.com", (*c).Parameters["email"])

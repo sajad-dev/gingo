@@ -29,5 +29,5 @@ func Cli() {
 		rootCmd.AddCommand(value.Command)
 
 	}
-	Root.Execute()
+	rootCmd.Execute()
 }

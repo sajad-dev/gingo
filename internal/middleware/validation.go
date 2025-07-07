@@ -11,7 +11,7 @@ import (
 	"github.com/iancoleman/strcase"
 	"github.com/sajad-dev/gingo/internal/app/validation"
 	"github.com/sajad-dev/gingo/internal/exception"
-	"github.com/sajad-dev/gingo/utils"
+	"github.com/sajad-dev/gingo-helpers/utils"
 )
 
 func sliceHandel(valueOf reflect.Value, key []string, value string) error {

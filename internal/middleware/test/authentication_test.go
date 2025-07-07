@@ -6,9 +6,9 @@ package test
 // 	"testing"
 
 // 	"github.com/gin-gonic/gin"
-// 	"github.com/sajad-dev/gingo/internal/app/helpers"
+// 	"github.com/sajad-dev/gingo-helpers/utils"
 // 	"github.com/sajad-dev/gingo/internal/middleware"
-// 	"github.com/sajad-dev/gingo/utils"
+// 	"github.com/sajad-dev/gingo-helpers/utils"
 // 	"github.com/stretchr/testify/assert"
 // )
 
@@ -22,7 +22,7 @@ package test
 // 	r.ServeHTTP(w, req)
 // 	assert.Equal(t,w.Code,401)
 	
-// 	token ,_ := helpers.CreateJWT(map[string]any{"message":"haha"})
+// 	token ,_ := utils.CreateJWT(map[string]any{"message":"haha"})
 // 	req, _ = http.NewRequest(http.MethodGet, "/test",nil)
 // 	req.Header.Set("Authorization", token)
 // 	w = httptest.NewRecorder()

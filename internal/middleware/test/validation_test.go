@@ -8,7 +8,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/sajad-dev/gingo/internal/app/validation"
 	"github.com/sajad-dev/gingo/internal/middleware"
-	"github.com/sajad-dev/gingo/utils"
+	"github.com/sajad-dev/gingo-helpers/utils"
 	"github.com/stretchr/testify/assert"
 )
 

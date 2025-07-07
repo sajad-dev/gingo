@@ -2,7 +2,7 @@ package middleware
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/sajad-dev/gingo/internal/app/helpers"
+	"github.com/sajad-dev/gingo-helpers/utils"
 	"github.com/sajad-dev/gingo/internal/exception"
 )
 
@@ -15,7 +15,7 @@ func AuthenticationMiddleware(ctx *gin.Context) {
 		return
 	}
 
-	_, valid, err := helpers.ValidJWT(authHeader)
+	_, valid, err := utils.ValidJWT(authHeader)
 
 	if err != nil {
 		exception.ServerException(ctx, err)

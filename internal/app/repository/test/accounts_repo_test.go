@@ -3,11 +3,18 @@ package test
 import (
 	"testing"
 
-	"github.com/sajad-dev/gingo/internal/db/table"
+	"github.com/sajad-dev/gingo-helpers/utils"
 	"github.com/sajad-dev/gingo/internal/app/repository"
-	"github.com/sajad-dev/gingo/utils"
+	"github.com/sajad-dev/gingo/internal/bootstrap"
+	"github.com/sajad-dev/gingo/internal/db/table"
 	"github.com/stretchr/testify/assert"
 )
+
+func TestMain(m *testing.M) {
+	bootstrap.UtilsBoot()
+
+	m.Run()
+}
 
 func TestAccountsRepo_GetAll(t *testing.T) {
 	db := utils.SetupTestDB()
@@ -121,4 +128,3 @@ func TestAccountsRepo_GetUserByFields(t *testing.T) {
 	assert.Equal(t, "Test User", result.FullName)
 	assert.Equal(t, "123456789", result.Mobile)
 }
-

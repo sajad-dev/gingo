@@ -7,7 +7,7 @@ import (
 	"gorm.io/gorm"
 )
 
-var TablesVerfiy []any = []any{&Portfolio{},&Accounts{},&Projects{}}
+var TablesVerfiy []any = []any{&Accounts{}}
 
 func PublicMigration(db *gorm.DB) error {
 	err := db.AutoMigrate(TablesVerfiy...)

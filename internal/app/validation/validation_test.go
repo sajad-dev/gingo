@@ -7,7 +7,7 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/go-playground/validator/v10"
 	"github.com/sajad-dev/gingo/internal/exception"
-	"github.com/sajad-dev/gingo/utils"
+	"github.com/sajad-dev/gingo-helpers/utils"
 	"github.com/stretchr/testify/assert"
 )
 

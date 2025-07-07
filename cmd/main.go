@@ -9,5 +9,6 @@ import (
 func main() {
 	config.BootConfig(".env")
 	connection.Connect()
+	
 	cli.Cli()
 }
