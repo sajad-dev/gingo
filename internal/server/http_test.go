@@ -12,7 +12,8 @@ func TestHttp(t *testing.T) {
 	ctx, _ := context.WithTimeout(context.Background(), time.Second)
 	err := make(chan error, 1)
 	go func() {
-		_, erre:= Http(8080,nil)
+		close := make(chan struct{})
+		erre := Http(8080, nil, close)
 		err <- erre
 	}()
 	select {
