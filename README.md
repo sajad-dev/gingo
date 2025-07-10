@@ -4,7 +4,7 @@
   <img src="https://img.shields.io/badge/Go-1.18+-00ADD8.svg?style=flat&logo=go" alt="Go Version">
   <img src="https://img.shields.io/badge/license-MIT-green.svg?style=flat" alt="License">
   <img src="https://img.shields.io/badge/version-1.0.0-blue.svg?style=flat" alt="Version">
-  <img src="https://img.shields.io/badge/status-stable-brightgreen.svg?style=flat" alt="Status">
+  <img src="https://img.shields.io/badge/Status-Beta-yellow.svg" alt="Status">
 </p>
 
 <p align="center">
